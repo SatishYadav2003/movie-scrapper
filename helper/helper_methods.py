@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from telegram_api import telegram_message_forward
 from logging_info import log_message
 import chromedriver_autoinstaller
+import shutil
 
 
 from utils.date_provide import date_provide
@@ -24,21 +25,28 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-chromedriver_autoinstaller.install()
 
 chrome_options = Options()
-
-chrome_options.add_argument("--headless")
+chrome_options.add_argument("--headless")  # Render does not allow GUI
 chrome_options.add_argument("--window-size=1920x1080")
 chrome_options.add_argument("--disable-gpu")
-chrome_options.add_argument("--no-sandbox") 
-chrome_options.add_argument("--disable-dev-shm-usage") 
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
 
-chrome_options.binary_location = "/usr/bin/chromium-browser"
+# Manually set the Chromium binary location
+chrome_path = shutil.which("chromium-browser")
+if chrome_path:
+    chrome_options.binary_location = chrome_path
+else:
+    chrome_options.binary_location = "/usr/bin/chromium-browser"  # Default path
 
-service = Service("/usr/bin/chromedriver")
+# Use system ChromeDriver
+chromedriver_autoinstaller.install()
+chromedriver_path = shutil.which("chromedriver") or "/usr/bin/chromedriver"
+service = Service(chromedriver_path)
+
+# Initialize WebDriver
 driver = webdriver.Chrome(service=service, options=chrome_options)
-
 
 
 
