@@ -7,6 +7,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from telegram_api import telegram_message_forward
 from logging_info import log_message
+import chromedriver_autoinstaller
 
 
 from utils.date_provide import date_provide
@@ -23,7 +24,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
+chromedriver_autoinstaller.install()
 
 chrome_options = Options()
 
@@ -33,10 +34,10 @@ chrome_options.add_argument("--disable-gpu")
 chrome_options.add_argument("--no-sandbox") 
 chrome_options.add_argument("--disable-dev-shm-usage") 
 
-chrome_options.binary_location = "/usr/bin/google-chrome-stable"
+chrome_options.binary_location = "/usr/bin/chromium-browser"
 
-service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service,options=chrome_options)
+service = Service("/usr/bin/chromedriver")
+driver = webdriver.Chrome(service=service, options=chrome_options)
 
 
 
