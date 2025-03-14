@@ -7,8 +7,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from telegram_api import telegram_message_forward
 from logging_info import log_message
-import chromedriver_autoinstaller
-import shutil
+
 
 
 from utils.date_provide import date_provide
@@ -25,37 +24,41 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-chrome_path = shutil.which("chromium-browser") or shutil.which("chromium")
-chromedriver_path = shutil.which("chromedriver")
 
-if not chrome_path or not chromedriver_path:
-    raise Exception("Chromium or Chromedriver not found!")
+# import chromedriver_autoinstaller
+# chromedriver_autoinstaller.install() 
+
+service = Service(ChromeDriverManager().install())
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
-chrome_options.add_argument("--no-sandbox")
-chrome_options.add_argument("--disable-dev-shm-usage")
-chrome_options.binary_location = chrome_path  # Set Chromium binary location
+chrome_options.add_argument("--window-size=1920x1080")
+chrome_options.add_argument("--disable-gpu")
 
-# Use Chromium WebDriver
-service = Service(chromedriver_path)
+# chrome_options = Options()
+# chrome_options.add_argument("--headless")             # Run Chrome in headless mode (no GUI)
+# chrome_options.add_argument("--window-size=1920x1080")    # Define a window size (even headless)
+# chrome_options.add_argument("--no-sandbox")             # Disable the sandbox for security issues in Linux
+# chrome_options.add_argument("--disable-dev-shm-usage")    # Overcome limited resource problems
+# chrome_options.add_argument("--disable-gpu") 
+
+
+
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
+service = Service() 
+driver = webdriver.Chrome(service=service, options=chrome_options)
 
 
 def execute_driver():
     return driver
 
 
-
-# niche wala correct hain
 def save_current_movie_name(movie_name):
     with open("previous_movie_name.txt","w",encoding="utf-8") as file:
         file.write(movie_name)
         
-
  
-# niche wala correct hain  
 def get_previous_movie_name():  
     try:
         with open("previous_movie_name.txt","r",encoding="utf-8") as file:
@@ -66,40 +69,33 @@ def get_previous_movie_name():
   
   
   
- 
-# niche wala correct hain
 def get_current_movie_link(xpath_condition):
     text_href_detail = driver.execute_script("return arguments[0].getAttribute('href');",xpath_condition)
     return text_href_detail
  
   
-   
-# niche wala correct hain
 def get_current_movie_name(movie,xpath_condition):                  
     text_detail = movie.find_element(By.XPATH,xpath_condition)
     return text_detail.text
   
  
-# niche wala correct hain
 def reset_url():
     time.sleep(random.uniform(4, 10)) 
     driver.get(os.getenv("MP4_MOVIEZ_LINK"))
 
 
- 
-# niche wala correct hain 
+
 def check_ready_state():
     WebDriverWait(driver,30).until(
             lambda driver: driver.execute_script("return document.readyState")=="complete"
         )
 
-# niche wala correct hain
+
 def save_compiled_movie_details(movie_details_history):
     with open("compiled_movie_details.json","w",encoding="utf-8") as file:
             json.dump(movie_details_history,file,ensure_ascii=False,indent=4)
 
 
-# niche wala correct hain
 def load_compiled_movie_details():
       try:
            with open("compiled_movie_details.json", "r", encoding="utf-8") as file:
@@ -107,8 +103,7 @@ def load_compiled_movie_details():
       except (FileNotFoundError, json.JSONDecodeError):
                  return []
 
-     
-# niche wala correct hain    
+  
 def scrap_current_movie_complete_details(movie_links):
     
     movie_details_history= load_compiled_movie_details()
@@ -164,8 +159,7 @@ def scrap_current_movie_complete_details(movie_links):
 
     return movie_image_all_url
    
- 
-# niche wala correct hain
+
 def generate_movie_link_from_movie_lists(movie_lists):
     
     movie_links = []
@@ -179,7 +173,6 @@ def generate_movie_link_from_movie_lists(movie_lists):
     
 
 
-# niche wala correct hain
 def check_and_notify_user():
         
     log_message(f" Scrapping start: {date_provide()}")
@@ -198,12 +191,10 @@ def check_and_notify_user():
        log_message(f" Scrapped new movie: {date_provide()}")
        
     log_message(f" Scrapping end: {date_provide()}\n")
-    driver.close()
+    # driver.close()
         
         
  
-  
-# niche wala correct hain  
 def scrap_up_to_date_movie():
     
     movie_lists = WebDriverWait(driver,30).until(
@@ -243,27 +234,3 @@ def scrap_up_to_date_movie():
     movie_lists.reverse()
     
     return [movie_lists,all_latest_movie_name_array,latest_movie_name]
-    
-    
-
-    
-    
-    
-    
-        
-
-    
-          
-        
-    
-        
-   
-        
-        
-        
-    
-    
-    
-    
-    
-    

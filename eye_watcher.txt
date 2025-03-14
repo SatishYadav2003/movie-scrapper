@@ -5264,3 +5264,107 @@ INFO:WDM:Driver [C:\Users\Satish Yadav\.wdm\drivers\chromedriver\win64\134.0.699
 INFO:root: Scrapping start: 2025-03-13 05:12:46 PM
 INFO:root: Scrapping end: 2025-03-13 05:12:49 PM
 
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:WebDriver version 134.0.6998.88 selected
+INFO:WDM:Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.88/win32/chromedriver-win32.zip
+INFO:WDM:About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.88/win32/chromedriver-win32.zip
+INFO:WDM:Driver downloading response is 200
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver has been saved in cache [C:\Users\Satish Yadav\.wdm\drivers\chromedriver\win64\134.0.6998.88]
+INFO:root: Scrapping start: 2025-03-14 11:20:09 AM
+INFO:root: Scrapped new movie: 2025-03-14 11:26:41 AM
+INFO:root: Scrapping end: 2025-03-14 11:26:41 AM
+
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [C:\Users\Satish Yadav\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+INFO:root: Scrapping start: 2025-03-14 11:29:14 AM
+INFO:root: Scrapping end: 2025-03-14 11:29:14 AM
+
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [C:\Users\Satish Yadav\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+INFO:root: Scrapping start: 2025-03-14 11:29:47 AM
+INFO:root: Scrapping end: 2025-03-14 11:29:47 AM
+
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [C:\Users\Satish Yadav\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+INFO:root: Scrapping start: 2025-03-14 11:30:40 AM
+INFO:root: Scrapping end: 2025-03-14 11:30:40 AM
+
+INFO:root: Scrapping start: 2025-03-14 11:30:46 AM
+INFO:root: Scrapping end: 2025-03-14 11:30:46 AM
+
+INFO:root: Scrapping start: 2025-03-14 11:30:51 AM
+INFO:root: Scrapping end: 2025-03-14 11:30:52 AM
+
+INFO:root: Scrapping start: 2025-03-14 11:30:57 AM
+INFO:root: Scrapping end: 2025-03-14 11:30:57 AM
+
+INFO:root: Scrapping start: 2025-03-14 11:31:03 AM
+INFO:root: Scrapping end: 2025-03-14 11:31:03 AM
+
+INFO:root: Scrapping start: 2025-03-14 11:31:08 AM
+INFO:root: Scrapping end: 2025-03-14 11:31:08 AM
+
+INFO:root: Scrapping start: 2025-03-14 11:31:14 AM
+INFO:root: Scrapping end: 2025-03-14 11:31:14 AM
+
+INFO:root: Scrapping start: 2025-03-14 11:31:20 AM
+INFO:root: Scrapping end: 2025-03-14 11:31:20 AM
+
+INFO:root: Scrapping start: 2025-03-14 11:31:25 AM
+INFO:root: Scrapping end: 2025-03-14 11:31:25 AM
+
+INFO:root: Scrapping start: 2025-03-14 11:31:31 AM
+INFO:root: Scrapping end: 2025-03-14 11:31:31 AM
+
+INFO:root: Scrapping start: 2025-03-14 11:31:36 AM
+INFO:root: Scrapping end: 2025-03-14 11:31:36 AM
+
+INFO:root: Scrapping start: 2025-03-14 11:31:42 AM
+INFO:root: Scrapping end: 2025-03-14 11:31:42 AM
+
+INFO:root: Scrapping start: 2025-03-14 11:31:47 AM
+INFO:root: Scrapping end: 2025-03-14 11:31:47 AM
+
+INFO:root: Scrapping start: 2025-03-14 11:32:00 AM
+INFO:root: Scrapping end: 2025-03-14 11:32:00 AM
+
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [C:\Users\Satish Yadav\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+INFO:root: Scrapping start: 2025-03-14 02:27:37 PM
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [C:\Users\Satish Yadav\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+INFO:root: Scrapping start: 2025-03-14 02:45:07 PM
+INFO:root: Scrapped new movie: 2025-03-14 02:45:46 PM
+INFO:root: Scrapping end: 2025-03-14 02:45:46 PM
+
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [C:\Users\Satish Yadav\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+INFO:root: Scrapping start: 2025-03-14 02:53:03 PM
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [C:\Users\Satish Yadav\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [C:\Users\Satish Yadav\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+INFO:root: Scrapping start: 2025-03-14 05:02:14 PM
+INFO:root: Scrapped new movie: 2025-03-14 05:04:37 PM
+INFO:root: Scrapping end: 2025-03-14 05:04:37 PM
+
