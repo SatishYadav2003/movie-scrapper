@@ -148,6 +148,10 @@ def scrap_current_movie_complete_details(movie_links):
         
         movie_download_quality_link_button = driver.find_element(By.XPATH,"//div[@style='text-align:left;']/a").get_attribute("href")
         movie_detail["download_page_link"] = movie_download_quality_link_button
+        
+        # chatgpt ka niche ka do line hain
+        movie_id = movie_download_quality_link_button.split("/")[-1].split(".")[0] 
+        movie_detail["movie_id"] = movie_id
          
             
         movie_details_history.insert(0,movie_detail)
