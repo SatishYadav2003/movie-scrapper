@@ -30,10 +30,10 @@ load_dotenv()
 
 service = Service(ChromeDriverManager().install())
 
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-chrome_options.add_argument("--window-size=1920x1080")
-chrome_options.add_argument("--disable-gpu")
+# chrome_options = Options()
+# chrome_options.add_argument("--headless")
+# chrome_options.add_argument("--window-size=1920x1080")
+# chrome_options.add_argument("--disable-gpu")
 
 # chrome_options = Options()
 # chrome_options.add_argument("--headless")             # Run Chrome in headless mode (no GUI)
@@ -44,10 +44,11 @@ chrome_options.add_argument("--disable-gpu")
 
 
 
-driver = webdriver.Chrome(service=service, options=chrome_options)
+# driver = webdriver.Chrome(service=service, options=chrome_options)
+driver = webdriver.Chrome(service=service)
 
-service = Service() 
-driver = webdriver.Chrome(service=service, options=chrome_options)
+# service = Service() 
+# driver = webdriver.Chrome(service=service, options=chrome_options)
 
 
 def execute_driver():
@@ -238,3 +239,5 @@ def scrap_up_to_date_movie():
     movie_lists.reverse()
     
     return [movie_lists,all_latest_movie_name_array,latest_movie_name]
+
+

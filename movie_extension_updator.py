@@ -4,11 +4,10 @@ import re
 def update_urls(json_data):
     for movie in json_data:
         for key, value in movie.items():
-            if isinstance(value, str) and "https://www.mp4moviez" in value:
-                if ".villas" not in value:
-                    value = re.sub(r"(https://www\.mp4moviez\.)[a-zA-Z0-9]+", r"\1villas", value)
-                    movie[key] = value
+            if isinstance(value, str) and "https://www.mp4moviez." in value:
+                movie[key] = re.sub(r"https://www\.mp4moviez\.[a-zA-Z0-9]+", "https://www.mp4moviez.shoes", value)
     return json_data
+
 
 
 with open("compiled_movie_details.json", "r", encoding="utf-8") as file:
