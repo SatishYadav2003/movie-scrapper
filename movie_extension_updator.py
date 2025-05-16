@@ -5,7 +5,7 @@ def update_urls(json_data):
     for movie in json_data:
         for key, value in movie.items():
             if isinstance(value, str) and "https://www.mp4moviez." in value:
-                movie[key] = re.sub(r"https://www\.mp4moviez\.[a-zA-Z0-9]+", "https://www.mp4moviez.shoes", value)
+                movie[key] = re.sub(r"https://www\.mp4moviez\.[a-zA-Z0-9]+", "https://www.mp4moviez.law", value)
     return json_data
 
 
