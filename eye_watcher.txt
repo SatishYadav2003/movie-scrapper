@@ -1,0 +1,7 @@
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [C:\Users\Satish Yadav\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+INFO:root: Scrapping start: 2025-05-18 08:57:28 PM
+INFO:root: Scrapping end: 2025-05-18 08:57:28 PM
+
